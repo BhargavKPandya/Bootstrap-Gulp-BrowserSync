@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Slider Project Demo</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" type="text/css" href="css/sliderStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/customStyle.css">
+    <link rel="stylesheet" type="text/css" href="css/contactFromStyle.css">
+
+</head>
+
+<body id="page-top">
+
+
+    <header class="primary-header">
+        <!--Navbar content-->
+
+
+        <div id="navbar-example">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                <div class="container">
+                    <a class="navbar-brand d-none d-lg-inline-block" href="#page-top" id="mainHomelink">Bhargav's Home</a>
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+     </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item ml-2 mr-2"><a class="nav-link" href="#scrollHome">Home</a></li>
+                            <li class="nav-item ml-2 mr-2"><a class="nav-link" href="#scrollResume">Resume</a></li>
+                            <li class="nav-item ml-2 mr-2"><a class="nav-link" href="#scrollWork">Work</a></li>
+                            <li class="nav-item ml-2 mr-2"><a class="nav-link" href="#scrollContact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+    </header>
+
+    <!--Slide content-->
+    <!-- <div class="page-content"> -->
+    <div class="content">
+
+        <div class="slider-container">
+            <div class="slider-control left inactive"></div>
+            <div class="slider-control right"></div>
+            <ul class="slider-pagi"></ul>
+            <div class="slider">
+                <div class="slide slide-0 active">
+                    <div class="slide__bg"></div>
+                    <div class="slide__content">
+                        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+                        <div class="slide__text">
+                            <h2 class="slide__text-heading">Project name 1</h2>
+                            <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam
+                                minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                            <a class="slide__text-link">Project link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-1 ">
+                    <div class="slide__bg"></div>
+                    <div class="slide__content">
+                        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+                        <div class="slide__text">
+                            <h2 class="slide__text-heading">Project name 2</h2>
+                            <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam
+                                minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                            <a class="slide__text-link">Project link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-2">
+                    <div class="slide__bg"></div>
+                    <div class="slide__content">
+                        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+                        <div class="slide__text">
+                            <h2 class="slide__text-heading">Project name 3</h2>
+                            <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam
+                                minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                            <a class="slide__text-link">Project link</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-3">
+                    <div class="slide__bg"></div>
+                    <div class="slide__content">
+                        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+                        <div class="slide__text">
+                            <h2 class="slide__text-heading">Project name 4</h2>
+                            <p class="slide__text-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam minus illo debitis nihil animi facere, doloremque voluptate tempore quia. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio veniam
+                                minus illo debitis nihil animi facere, doloremque voluptate tempore quia.</p>
+                            <a class="slide__text-link">Project link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Home Content-->
+        <section id="scrollHome">
+            <div class="container p-5 id=" homePage " name="homePage ">
+                      <div class="row ">
+                         <div class="col-lg-12 col-md-6 col-xs-3 ">
+                            <h2>Welcome to my online portfolio</h2>
+                            <p>Please review my resume on this site</p>
+                        </div>
+                    </div>
+                    <div class="row ">
+                     <div class="col-lg-12 col-md-6 col-xs-3 ">
+                        <h3>My skills</h3>
+                        <p>Some of my Technical skills are shown below as per my experty level.</p>
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-md-3 col-xs-12 col-lg-6 ">
+                        <div class="row ">
+                            <div class="col-lg-12 col-md-12 col-xs-12 ">
+                                <h3>About Myself</h3>
+                                <p>Number of projects worked, work experience... .... ....</p>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-lg-4 col-md-4 col-xs-4 ">
+                                <div class="container card ">
+                                <i></i>
+                                <h4>3.5</h4>
+                                <p>work experience</p>
+                            </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-xs-4 ">
+                                <div class="container card ">
+                                <i></i>
+                                <h4>3.5</h4>
+                                <p>work experience</p>  
+                            </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-xs-4 ">
+                                <div class="container card ">
+                                <i></i>
+                                <h4>3.5</h4>
+                                <p>work experience</p>
+                            </div>
+                            </div>
+                            </div>
+
+                    </div>
+                    <div class="col-md-9 col-xs-12 col-lg-6 "> 
+                 <h4>HTML5</h4>
+                 <div class="progress_br ">
+                 <div class="progress ">
+                    <div class="progress-bar " role="progressbar " aria-valuenow="70 " aria-valuemin="0 " aria-valuemax="100 " style="width: 70% ">
+                       <!--<span class="sr-only ">70% complete</span>-->
+                   </div>
+               </div>
+           </div>
+           
+               <h4>CSS3</h4>
+               <div class="progress_br ">
+               <div class="progress ">
+                <div class="progress-bar progress-bar-striped active " role="progressbar " aria-valuenow="70 " aria-valuemin="0 " aria-valuemax="100 " style="width: 70% ">
+                </div>
+            </div>
+        </div>
+        
+            <h4>Bootstrap</h4>
+            <div class="progress_br ">
+            <div class="progress ">
+                <div class="progress-bar " role="progressbar " aria-valuenow="80 " aria-valuemin="0 " aria-valuemax="100 " style="width: 80% ">
+                </div>
+            </div>  
+        </div>
+        
+            <h4>JavaScript</h4>
+            <div class="progress_br ">
+            <div class="progress ">
+                <div class="progress-bar " role="progressbar " aria-valuenow="70 " aria-valuemin="0 " aria-valuemax="100 " style="width: 70% ">
+                </div>
+            </div>  
+        </div>
+        
+            <h4>jQuery</h4>
+            <div class="progress_br ">
+            <div class="progress ">
+                <div class="progress-bar " role="progressbar " aria-valuenow="85 " aria-valuemin="0 " aria-valuemax="100 " style="width: 85% ">
+                </div>
+            </div> 
+        </div>
+            </div>  
+        </div>
+    </div>
+</section>
+
+  <!--Resume Content-->
+<section id="scrollResume ">
+  <div class="container p-5 " id="resumeTab " name="resumeTab ">
+     <div class="row ">
+        <h2 class="col-lg-12 col-md-6 col-sm-6 p-2 ">Edcucation Details</h2>
+        <div class="card col-md-12 ">
+            <div class="card-body ">
+               <h4>Sheridan College</h4>
+               <p>Computer System Technician</p>
+           </div>
+        </div>
+        <div class="card col-md-12 mt-5 ">
+            <div class="card-body ">
+               <h4>Gujarat University</h4>
+               <p>Bachlore of Information Technology</p>
+            </div>
+        </div>
+    </div>
+    
+   <div class="row ">
+        <h2 class="col-lg-12 col-md-6 col-sm-6 p-2 ">Work Experience</h2>
+    </div>
+   <div class="card-deck ">
+    <div class="card ">
+        <div class="card-body ">
+           <h5 class="card-title ">Morneau Shepell</h5>
+           <h6 class="card-subtitle ">Website Developer</h6>
+           <p class="card-text ">Technology, projects, work</p>
+       </div>
+   </div>
+   <div class="card ">
+    <div class="card-body ">
+       <h5 class="card-title ">Morneau Shepell</h5>
+       <h6 class="card-subtitle ">Website Developer</h6>
+       <p class="card-text ">Technology, projects, work</p>
+   </div>
+</div>
+<div class="card ">
+    <div class="card-body ">
+       <h5 class="card-title ">Morneau Shepell</h5>
+       <h6 class="card-subtitle ">Website Developer</h6>
+       <p class="card-text ">Technology, projects, work</p>
+   </div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+<!--Work Content-->
+<section id="scrollWork ">
+  <div class="container p-5 " id="workTab " name="workTab ">
+   <div class="row ">
+     <div class="col-md-6 col-lg-12 col-sm-6 ">
+        <h3>My work portgolio</h3>
+        <p>Here are some of my work projects outline.</p>
+    </div>
+</div> 
+
+<div>
+
+    <div class="row ">
+        <div class="col-md-6 col-lg-4 col-xs-12 col-sm-12 ">
+          <a class="tea-item d-block mx-auto my-3 " data-toggle="modal " data-target="#tea-modal-1 " href="# ">
+                <div class="tea-item-caption d-flex position-absolute h-100 w-100 ">
+                        <div class="tea-item-caption-content my-auto w-100 text-center text-white ">
+                          <i class="fas fa-search-plus fa-3x "></i>
+                        </div>
+                </div>
+                <img class="img-fluid " src="images/Black_Tea_1.jpg " alt="Black Tea ">
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xs-12 col-sm-12 ">
+            <a class="tea-item d-block mx-auto my-3 " data-toggle="modal " data-target="#tea-modal-2 " href="# ">
+                <div class="tea-item-caption d-flex position-absolute h-100 w-100 ">
+                        <div class="tea-item-caption-content my-auto w-100 text-center text-white ">
+                            <i class="fas fa-search-plus fa-3x "></i>
+                        </div>
+                </div>
+                <img class="img-fluid " src="images/red-tea-square.jpg " alt="Red Tea ">
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xs-12 col-sm-12 ">
+                <a class="tea-item d-block mx-auto my-3 " data-toggle="modal " data-target="#tea-modal-3 " href="# ">
+                    <div class="tea-item-caption d-flex position-absolute h-100 w-100 ">
+                            <div class="tea-item-caption-content my-auto w-100 text-center text-white ">
+                                <i class="fas fa-search-plus fa-3x "></i>
+                            </div>
+                    </div>
+                    <img class="img-fluid " src="images/Organic-Tulsi-Green-Tea-Tulsi-Green-Sensation.jpg " alt="Green Tea ">
+                </a>
+            </div>
+      </div>
+
+
+</div>
+
+<!-- <div class="portfolio-modal teaFrame-hide " id="tea-modal-1 ">
+        <div class="bg-white ">
+          <a class="close-button d-none d-md-block " href="# ">
+            <i class="fa fa-3x fa-times "></i>
+          </a>
+          <div class="container text-center ">
+            <div class="row ">
+              <div class="col-lg-8 mx-auto ">
+                <h2 class="text-secondary text-uppercase mb-0 ">Project Name</h2>
+                <hr class="mb-5 ">
+                <img class="img-fluid mb-5 " src="images/Black_Tea_1.jpg " alt="Black Tea ">
+                <p class="mb-5 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <a class="btn btn-primary btn-lg rounded-pill " href="# ">
+                  <i class="fa fa-close "></i>
+                  Close Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+</div> -->
+<div class="modal fade " id="tea-modal-1 " tabindex="-1 " role="dialog " aria-labelledby="teamodal1 " aria-hidden="true ">
+    <div class="modal-dialog " role="document ">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <h5 class="modal-title " id="teaModalLabel1 ">Black Tea</h5>
+          <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+            <span aria-hidden="true ">&times;</span>
+          </button>
+        </div>
+        <div class="container text-center modal-body ">
+                <div class="row ">
+                  <div class="col-lg-8 mx-auto ">
+                    <h2 class="text-secondary text-uppercase mb-0 ">Black Tea</h2>
+                    <hr class="mb-5 ">
+                    <img class="img-fluid mb-5 " src="images/Black_Tea_1.jpg " alt="Black Tea ">
+                    <p class="mb-5 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  </div>
+                </div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button " class="btn btn-primary " data-dismiss="modal ">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade " id="tea-modal-2 " tabindex="-1 " role="dialog " aria-labelledby="teamodal2 " aria-hidden="true ">
+    <div class="modal-dialog " role="document ">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <h5 class="modal-title " id="teaModalLabel2 ">Red Tea</h5>
+          <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+            <span aria-hidden="true ">&times;</span>
+          </button>
+        </div>
+        <div class="container text-center modal-body ">
+                <div class="row ">
+                  <div class="col-lg-8 mx-auto ">
+                    <h2 class="text-secondary text-uppercase mb-0 ">Red Tea</h2>
+                    <hr class="mb-5 ">
+                    <img class="img-fluid mb-5 " src="images/red-tea-square.jpg " alt="Red Tea ">
+                    <p class="mb-5 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  </div>
+                </div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button " class="btn btn-primary " data-dismiss="modal ">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="modal fade " id="tea-modal-3 " tabindex="-1 " role="dialog " aria-labelledby="teamodal3 " aria-hidden="true ">
+    <div class="modal-dialog " role="document ">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <h5 class="modal-title " id="teaModalLabel3 ">Green Tea</h5>
+          <button type="button " class="close " data-dismiss="modal " aria-label="Close ">
+            <span aria-hidden="true ">&times;</span>
+          </button>
+        </div>
+        <div class="container text-center modal-body ">
+                <div class="row ">
+                  <div class="col-lg-8 mx-auto ">
+                    <h2 class="text-secondary text-uppercase mb-0 ">Green Tea</h2>
+                    <hr class="mb-5 ">
+                    <img class="img-fluid mb-5 " src="images/Organic-Tulsi-Green-Tea-Tulsi-Green-Sensation.jpg " alt="Black Tea ">
+                    <p class="mb-5 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                  </div>
+                </div>
+        </div>
+        <div class="modal-footer ">
+          <button type="button " class="btn btn-primary " data-dismiss="modal ">Close</button>
+        </div>
+      </div>
+    </div>
+</div>
+</section>
+
+  <!--contact Content-->
+<section id="scrollContact ">
+  <div class="container p-5 " id="contactTab " name="contactTab ">
+    <form class="form-group ">
+     <div>
+        <div class="row ">
+            <div class="col-lg-8 ">
+                <h3 class="mt-4 "><i class="fas fa-envelope pr-2 "></i>Write to me:</h3>
+                <div class="row ">
+                    <div class="col-md-6 ">
+
+                     <div class="mb-0 ">
+                            <div class="form-label-group ">
+                        
+                         <input type="text " id="formPersonName " class="form-control " placeholder="Enter your name " required>
+                         <label for="formPersonName ">Your name</label>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="col-md-6 ">
+                  <div class="mb-0 ">
+                        <div class="form-label-group ">
+                    
+                    <input type="text " id="formPersonEmail " class="form-control " placeholder="Enter your email " required>
+                    <label for="formPersonEmail ">Your email</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-6 ">
+                <div class="mb-0 ">
+                        <div class="form-label-group ">
+                    
+                    <input type="text " id="formPersonPhone " class="form-control " placeholder="Enter your phone ">
+                    <label for="formPersonPhone ">Your phone</label>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="mb-0 ">
+                        <div class="form-label-group ">
+                   
+                   <input type="text " id="formPersonCompany " class="form-control " placeholder="Enter your company name ">
+                   <label for="formPersonCompany ">Your company</label>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+
+       <div class="row ">
+        <div class="col-md-12 ">
+            <div class="mb-0 ">
+                    <div class="form-label-group ">
+                
+                <textarea id="formPersonMessage " class="form-control " rows="3 " placeholder="Enter your message/concerns here "></textarea>
+                <label for="formPersonMessage ">Your message</label>
+            </div>
+                <button type="button " class="btn btn-outline-primary ">Submit</button>
+                <!-- <a class="btn-floating btn-lg blue ">
+                    <i class="far fa-paper-plane "></i>
+                </a> -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="col-lg-4 ">
+    <div class="text-left h-100 white-text ">
+        <h3 class="my-4 pb-2 ">Contact information</h3>
+        <ul class="text-lg-left list-unstyled ml-4 ">
+            <li>
+              <p><i class="fas fa-map-marker-alt pr-2 "></i>Toronto, CA</p>
+          </li>
+          <li>
+              <p><i class="fas fa-phone pr-2 "></i>+ 1 647 769 8432</p>
+          </li>
+          <li>
+              <p><i class="fas fa-envelope pr-2 "></i>bhargavkpandya.22@gmail.com</p>
+          </li>
+      </ul>
+      <hr class="hr-light my-4 ">
+      <ul class="list-inline text-center list-unstyled ">
+        <li class="list-inline-item ">
+          <a class="p-2 fa-lg tw-ic ">
+            <i class="fab fa-twitter "></i>
+        </a>
+    </li>
+    <li class="list-inline-item ">
+      <a class="p-2 fa-lg li-ic ">
+        <i class="fab fa-linkedin-in "> </i>
+    </a>
+</li>
+<li class="list-inline-item ">
+  <a class="p-2 fa-lg ins-ic ">
+    <i class="fab fa-instagram "> </i>
+</a>
+</li>
+</ul>
+
+</div>
+
+</div>
+</div>
+</div>
+
+</form>
+</div>
+</section>
+</div>
+
+<footer>
+    <div class="container ">
+        <div class="d-flex justify-content-center mt-4 border-top ">
+          <h4 class="d-flex align-items-center p-4 ">Bhargav Pandya</h4>
+
+          <span class="d-flex align-items-center p-4 "><a href="https://www.linkedin.com/in/bhargavkpandya/ " target="_blank "><i class="fab fa-linkedin-in "></i></a></span>
+          <span class="d-flex align-items-center p-4 "><a href="mailto:bhargavkpandya.1211@gmail.com "><i class="fas fa-envelope "></i></a></span>
+          <span class="d-flex align-items-center p-4 "><a href="tel:+1-647-769-8432 "><i class="fas fa-phone "></i></a></span>
+
+      </div>
+      <div class="d-flex justify-content-center ">
+        <p>Copyright &copy;2019 by Bhargav Pandya</p>
+      </div>
+  </div>
+</footer>
+
+<script>
+
+    $(document).ready(function() {
+        
+      
+
+        
+
+       /* $('[data-spy="scroll "]').on('activate.bs.scrollspy', function () {
+            
+          });*/
+
+    });
+</script>
+<script src="js/smoothscroll.js " type="text/javascript "></script>
+<script src="js/slider.js " type="text/javascript "></script>
+</body>
+</html>
