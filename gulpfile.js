@@ -4,15 +4,6 @@ var browserSync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
 var cache = require('gulp-cache');
 
-var srcStyle = './css/**/*.css';
-var srcJS ='./js/**/*.js';
-var srcImage = './images/**/*.*';
-var srcHTML = './*.html';
-
-var styleURL = './dist/css/**/*.css';
-var jsURL ='./dist/js/**/*.js';
-var imageURL = './dist/images/**/*.*';
-var htmlURL= './dist/*.html';
 
 gulp.task('browser-sync', function(){
   browserSync.init({
@@ -29,19 +20,19 @@ function copyhtml () {
  }
 
  function copyImage () {
-  return gulp.src('./src/images/*')
+  return gulp.src('./src/images/*', {since: gulp.lastRun(copyImage)})
        .pipe(gulp.dest('./dist/images/'))
        .pipe(browserSync.reload({stream: true}));
 }
 
  function copyCSS () {
-  return gulp.src('./src/css/*.css')
+  return gulp.src('./src/css/*.css', {since: gulp.lastRun(copyCSS)})
        .pipe(gulp.dest('./dist/css/'))
        .pipe(browserSync.reload({stream: true}));
 }
 
 function copyJS () {
-  return gulp.src('./src/js/*.js')
+  return gulp.src('./src/js/*.js', {since: gulp.lastRun(copyJS)})
        .pipe(gulp.dest('./dist/js/'))
        .pipe(browserSync.reload({stream: true}));
 }
