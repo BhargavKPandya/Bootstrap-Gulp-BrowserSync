@@ -5,9 +5,10 @@
     "main": "index.js",
     "dependencies": {
         "browser-sync": "^2.26.3",
+        "del": "^4.1.0",
         "gulp": "^4.0.0",
-        "gulp-uglify": "^3.0.2",
-        "gulp-cache": "^1.1.1"
+        "gulp-cache": "^1.1.1",
+        "gulp-uglify": "^3.0.2"
     },
     "devDependencies": {
         "fsevents": "*",
