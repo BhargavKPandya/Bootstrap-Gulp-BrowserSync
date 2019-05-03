@@ -8,22 +8,26 @@
 var gulp = require('gulp');
 //var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cache = require('gulp-cache');
 var del = require('del');
 var path = require('path');
+//const htmlmin = require('gulp-htmlmin');
 const dir = {
   src: {
     path: "./src/",
     images: "./src/images/",
     css: "./src/css/",
     js: "./src/js/",
+    dataFiles: "./src/dataFiles/"
   },
   dist: {
     path: "./dist/",
     images: "./dist/images/",
     css: "./dist/css/",
     js: "./dist/js/",
+    dataFiles: "./dist/dataFiles/"
   }
 };
 
@@ -31,7 +35,8 @@ const extension = {
   template: "*.html",
   style: "*.css",
   image: "*",
-  script: "*.js"
+  script: "*.js",
+  data: "*"
 };
 
 gulp.task('browser-sync', function () {
@@ -52,6 +57,7 @@ function cleanDist(){
 
 function copyhtml() {
   return gulp.src(`${dir.src.path + extension.template}`)
+    //.pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(`${dir.dist.path}`))
     .pipe(browserSync.reload({ stream: true }));
 }
@@ -69,8 +75,23 @@ function copyCSS() {
 }
 
 function copyJS() {
-  return gulp.src(`${dir.src.js + extension.script}`, { since: gulp.lastRun(copyJS) })
+  return gulp.src([
+    `${dir.src.js + "jquery-3.3.1.min.js"}`,
+    `${dir.src.js + "popper.min.js"}`,
+    'node_modules/bootstrap/dist/js/bootstrap.min.js',
+    `${dir.src.js + "product.js"}`,
+    `${dir.src.js + "slider.js"}`,
+    `${dir.src.js + "smoothscroll.js"}`
+    
+  ])
+    .pipe(concat('script.js'))
     .pipe(gulp.dest(`${dir.dist.js}`))
+    .pipe(browserSync.reload({ stream: true }));
+}
+
+function copyDataFiles() {
+  return gulp.src(`${dir.src.dataFiles + extension.data}`, { since: gulp.lastRun(copyDataFiles) })
+    .pipe(gulp.dest(`${dir.dist.dataFiles}`))
     .pipe(browserSync.reload({ stream: true }));
 }
 
@@ -111,8 +132,16 @@ function watchImage() {
     });
 }
 
+function watchDataFiles() {
+  return gulp.watch(`${dir.src.dataFiles+ extension.data}`, gulp.parallel(copyDataFiles))
+    .on('unlink', function (filepath) {
+      var filePathFromSrc = path.relative(path.resolve(`${dir.src.dataFiles}`), filepath);
+      var destFilePath = path.resolve(`${dir.dist.dataFiles}`, filePathFromSrc);
+      del.sync(destFilePath);
+      reload();
+    });
+}
 
-
-gulp.task('copy', gulp.parallel(copyCSS, copyJS, copyhtml, copyImage));
-gulp.task('watch', gulp.parallel(watchCSS, watchhtml, watchJS, watchImage));
+gulp.task('copy', gulp.parallel(copyCSS, copyJS, copyhtml, copyImage, copyDataFiles));
+gulp.task('watch', gulp.parallel(watchCSS, watchhtml, watchJS, watchImage, watchDataFiles));
 gulp.task('default',gulp.series(cleanDist, gulp.parallel('browser-sync', 'copy', 'watch')));

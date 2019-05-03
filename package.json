@@ -4,11 +4,17 @@
     "description": "testing-gulp-for-auto",
     "main": "index.js",
     "dependencies": {
+        "bootstrap": "^4.3.1",
         "browser-sync": "^2.26.3",
+        "browsersync": "0.0.1-security",
         "del": "^4.1.0",
         "gulp": "^4.0.0",
         "gulp-cache": "^1.1.1",
-        "gulp-uglify": "^3.0.2"
+        "gulp-concat": "^2.6.1",
+        "gulp-htmlmin": "^5.0.1",
+        "gulp-uglify": "^3.0.2",
+        "jquery": "^3.4.0",
+        "popper.js": "^1.15.0"
     },
     "devDependencies": {
         "fsevents": "*",
